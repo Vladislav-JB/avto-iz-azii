@@ -321,6 +321,10 @@
   .v-page .v-display--xl { line-height: 1.05; }
   .hero__copy .v-display { font-size: clamp(2.1rem, 1rem + 2.6vw, 3.6rem); }
   .bar__mark i { background: var(--v-accent); box-shadow: inset 0 -.22em 0 #121a24; } /* паром на волне */
+  /* первый экран на компьютере: плотнее светлая подложка под текстом справа – борт корабля не спорит с заголовком */
+  @media (min-width: 861px) {
+    .hero__scrim { background: linear-gradient(to left, rgb(var(--canvas-rgb) / .96) 0%, rgb(var(--canvas-rgb) / .9) 40%, rgb(var(--canvas-rgb) / .45) 54%, transparent 66%); }
+  }
 </style>
 </head>
 <body>
